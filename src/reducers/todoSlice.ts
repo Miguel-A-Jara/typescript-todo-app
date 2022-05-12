@@ -5,7 +5,7 @@ export interface TodoState{
   desc: string;
   id: number;
   isCompleted: boolean;
-};
+}
 
 interface TodoSliceState {
   todos: TodoState[]
@@ -14,7 +14,7 @@ interface TodoSliceState {
 const initialState: TodoSliceState = {
   /* todos: [{title: '', desc: '', id: 0}], */
   todos: []
-} 
+};
 
 const todoSlice = createSlice({
   name: 'todo',
@@ -25,15 +25,15 @@ const todoSlice = createSlice({
     },
 
     remTodo: (state: TodoSliceState, action: PayloadAction<TodoState>) => {
-      state.todos = state.todos.filter(todo => todo.id !== action.payload.id)
+      state.todos = state.todos.filter(todo => todo.id !== action.payload.id);
     },
 
     toggleTodo: (state: TodoSliceState, action: PayloadAction<TodoState>) => {
-      state.todos = state.todos.map((todo) => {
+      state.todos = state.todos.map((todo) => (
         todo.id === action.payload.id
           ? {...todo, isCompleted: !todo.isCompleted }
           : todo
-      })
+      ));
     }
   }
 });

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 import ListTodoCard from './ListTodoCard';
@@ -14,16 +14,16 @@ const ListTodo = () => {
         /* The "ul" element is only rendered when we have a todo in our 'todos state' */
         todos.length > 0 &&
         <ul className='bg-white/50 shadow-lg shadow-black/25 rounded-lg p-4 flex flex-col gap-4'>
-        {
-          todos.map(todo => (
-            <ListTodoCard key={ todo.id } todo={ todo } />
-          )) 
-        }
+          {
+            todos.map(todo => (
+              <ListTodoCard key={ todo.id } todo={ todo } />
+            )) 
+          }
         </ul>
 
       }
     </div>
-  )
-}
+  );
+};
 
-export default ListTodo
+export default ListTodo;

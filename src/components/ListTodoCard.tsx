@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { useDispatch } from 'react-redux';
-import { TodoState, remTodo, toggleTodo } from '../reducers/todoSlice';
+import { TodoState, remTodo } from '../reducers/todoSlice';
+import ListTodoCardButton from './ListTodoCardButton';
 
 interface TodoProps {
   todo: TodoState
@@ -13,11 +14,7 @@ const ListTodoCard = ({todo}: TodoProps) => {
 
   const handleDelete = () => {
     dispatch(remTodo(todo));
-  }
-
-  const handleToggle = () => {
-    dispatch(toggleTodo(todo))
-  }
+  };
 
   return (
     <div className='bg-pink-500/50 rounded-lg p-4'>
@@ -27,11 +24,9 @@ const ListTodoCard = ({todo}: TodoProps) => {
         Delete
       </button>
 
-      <button onClick={ handleToggle }>
-        Toggle
-      </button>
+      <ListTodoCardButton todo={ todo } />
     </div>
-  )
-}
+  );
+};
 
-export default ListTodoCard
+export default ListTodoCard;

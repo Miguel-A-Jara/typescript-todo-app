@@ -11,4 +11,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <TodoScreen />
     </Provider>
   </React.StrictMode>
-)
+);
