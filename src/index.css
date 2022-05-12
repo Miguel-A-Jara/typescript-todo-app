@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input-form {
+    @apply w-1/2 bg-white/50 backdrop-blur-xl shadow-md shadow-black/25 rounded-sm text-xl text-right p-2 
+    focus:outline-none
+  }
+}
