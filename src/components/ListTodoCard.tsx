@@ -13,13 +13,15 @@ const ListTodoCard = ({todo}: TodoProps) => {
 
   return (
     <div className={`${ todo.isCompleted ? 'bg-green-500' : 'bg-red-500' } rounded-lg p-4 transition-all duration-300`}>
-      <h2 className='text-center text-3xl font-bold'>{ title }</h2>
+      <h2 className='text-center text-3xl font-bold truncate'>{ title }</h2>
       <hr />
-      <p className='text-justify text-xl font-extralight'>{ desc }</p>
+      <p className='text-justify text-xl font-extralight truncate'>{ desc }</p>
 
-      <ListTodoCardDelete todo={ todo } />
+      <div className='flex justify-around pt-4'>
+        <ListTodoCardDelete todo={ todo } />
 
-      <ListTodoCardButton todo={ todo } />
+        <ListTodoCardButton todo={ todo } />
+      </div>
     </div>
   );
 };

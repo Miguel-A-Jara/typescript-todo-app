@@ -13,7 +13,7 @@ const ListTodo = () => {
       {
         /* The "ul" element is only rendered when we have a todo in our 'todos state' */
         todos.length > 0 &&
-        <ul className='bg-white/50 shadow-lg shadow-black/25 rounded-lg p-4 flex flex-col gap-4'>
+        <ul className='h-full bg-white/50 shadow-lg shadow-black/25 rounded-lg p-4 flex flex-col gap-4 overflow-y-scroll'>
           {
             todos.map(todo => (
               <ListTodoCard key={ todo.id } todo={ todo } />

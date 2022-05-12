@@ -37,6 +37,7 @@ const FormTodo = () => {
         className='input-form'
         placeholder='Todo Title'
         autoComplete='off'
+        maxLength={20}
       />
 
       <input 
@@ -47,6 +48,7 @@ const FormTodo = () => {
         className='input-form'
         placeholder='Todo Description'
         autoComplete='off'
+        maxLength={50}
       />
 
       <button className='bg-white/50 p-2 rounded-md'>
